@@ -1,0 +1,15 @@
+---
+title: "E155 Portfolio"
+image: images/headshot.jpg
+about:
+    template: jolla
+    links:
+        - icon: linkedin
+          text: Linkedin
+          href: https://www.linkedin.com/in/mbi05/
+        - icon: github
+          text: Github
+          href: https://github.com/MaynorB
+---
+
+About this site
