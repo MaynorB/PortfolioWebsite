@@ -1,5 +1,5 @@
 ---
-title: "Hello Quarto"
+title: "Hello EVERYONE"
 description: "Welcome to my Quarto Profile"
 author: "Maynor Bac Itzep"
 date: "8/29/24"
