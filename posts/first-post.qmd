@@ -1,6 +1,6 @@
 ---
-title: "Hello Quarto"
-description: "Welcome to my Quarto Profile"
+title: "Inital Reflection"
+description: "I don't got one"
 author: "Maynor Bac Itzep"
 date: "8/29/24"
 categories:
@@ -8,3 +8,8 @@ categories:
     - labreport
 draft: false
 ---
+
+I spent a long time getting this site ready. Mainly the publishing part, I wish it did
+not take so long but whatever at this point. I am hoping to learn more about
+Microprocessors in this course as well as embedded systems but the first lab
+is already a struggle since I can not solder ._.

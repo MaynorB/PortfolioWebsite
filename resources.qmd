@@ -1,0 +1,8 @@
+---
+title: "RESOURCESSSS"
+about:
+    template: jolla
+    links:
+        - text: Class Website
+          href: https://hmc-e155.github.io/
+---
