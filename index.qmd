@@ -1,5 +1,5 @@
 ---
-title: "E155 Portfolio"
+title: "E1555 Portfolio"
 image: images/headshot.jpg
 about:
     template: jolla
@@ -12,4 +12,4 @@ about:
           href: https://github.com/MaynorB
 ---
 
-BEANS
+About this page is that
