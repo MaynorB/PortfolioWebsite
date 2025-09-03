@@ -14,6 +14,41 @@
     "text": "Maynor is a computer scientist at Harvey Mudd who does not like sitting down all day coding, he prefers making a sonic sensor detect if he is in front of it or not. When not sobbing in the corner because of his classes he chose, he enjoys gaming, skating around and failing the tricks, gymming, listening to music, buying more Jordans, looking at cars and laying down in the randomest places you can think of."
   },
   {
+    "objectID": "labs/lab1/lab1.html#introduction",
+    "href": "labs/lab1/lab1.html#introduction",
+    "title": "E155 Portfolio",
+    "section": "Introduction",
+    "text": "Introduction\nIn this lab, we were supposed to solder our components onto our boards. Once done, we then proceeded to code the FPGA blink three LEDS based on input recieved as well as a seven segment LED. The three LEDs has seperate conditions to be powered on: For the first LED, a XOR gate was used based on input of two switches For the second LED, an AND gate was used based on input of two switches For the third LED, it had to blink at a rate of 2.4 Hz\nFor the seven segement LED, it had to displace the hexadecimals 0x0 to 0xF while being able to tell the difference (EX, 8 and B are clearly different)"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#design-and-testing-methodology",
+    "href": "labs/lab1/lab1.html#design-and-testing-methodology",
+    "title": "E155 Portfolio",
+    "section": "Design and Testing Methodology",
+    "text": "Design and Testing Methodology"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#technical-documentation",
+    "href": "labs/lab1/lab1.html#technical-documentation",
+    "title": "E155 Portfolio",
+    "section": "Technical Documentation:",
+    "text": "Technical Documentation:"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#results-and-discussion",
+    "href": "labs/lab1/lab1.html#results-and-discussion",
+    "title": "E155 Portfolio",
+    "section": "Results and Discussion",
+    "text": "Results and Discussion"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#ai-prototype-summary",
+    "href": "labs/lab1/lab1.html#ai-prototype-summary",
+    "title": "E155 Portfolio",
+    "section": "AI Prototype Summary",
+    "text": "AI Prototype Summary"
+  },
+  {
     "objectID": "posts/first-post.html",
     "href": "posts/first-post.html",
     "title": "Inital Reflection",
