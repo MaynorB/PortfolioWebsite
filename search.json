@@ -16,35 +16,28 @@
   {
     "objectID": "labs/lab1/lab1.html#introduction",
     "href": "labs/lab1/lab1.html#introduction",
-    "title": "E155 Portfolio",
+    "title": "Figure 1 Portfolio",
     "section": "Introduction",
     "text": "Introduction\nIn this lab, we were supposed to solder our components onto our boards. Once done, we then proceeded to code the FPGA blink three LEDS based on input recieved as well as a seven segment LED. The three LEDs has seperate conditions to be powered on: For the first LED, a XOR gate was used based on input of two switches For the second LED, an AND gate was used based on input of two switches For the third LED, it had to blink at a rate of 2.4 Hz\nFor the seven segement LED, it had to displace the hexadecimals 0x0 to 0xF while being able to tell the difference (EX, 8 and B are clearly different)"
   },
   {
     "objectID": "labs/lab1/lab1.html#design-and-testing-methodology",
     "href": "labs/lab1/lab1.html#design-and-testing-methodology",
-    "title": "E155 Portfolio",
+    "title": "Figure 1 Portfolio",
     "section": "Design and Testing Methodology",
-    "text": "Design and Testing Methodology"
-  },
-  {
-    "objectID": "labs/lab1/lab1.html#technical-documentation",
-    "href": "labs/lab1/lab1.html#technical-documentation",
-    "title": "E155 Portfolio",
-    "section": "Technical Documentation:",
-    "text": "Technical Documentation:"
+    "text": "Design and Testing Methodology\nTo start, I began with the osciliator. It typically genertaes a clock signla at 24Mhz. A counter was utilized to divide the high frequency into one lower that would allow the led to blink at 2.4 Hz. It used a simple clock divider within the top module.\nThe next two LEDS were reletivly simple. I used gates for their respective inputs. I then assigned the result to the LED so it would flash when the conditions were met.\nAs for the segemnt, this was took a bit to design. I decided to utilize combinational logic and a case block to track the total inputs being provided. I have 15 different cases to track 0x1 to 0xF. With this, I decided to set 0x0 as default as no input would be provided. ## Technical Documentation:"
   },
   {
     "objectID": "labs/lab1/lab1.html#results-and-discussion",
     "href": "labs/lab1/lab1.html#results-and-discussion",
-    "title": "E155 Portfolio",
+    "title": "Figure 1 Portfolio",
     "section": "Results and Discussion",
     "text": "Results and Discussion"
   },
   {
     "objectID": "labs/lab1/lab1.html#ai-prototype-summary",
     "href": "labs/lab1/lab1.html#ai-prototype-summary",
-    "title": "E155 Portfolio",
+    "title": "Figure 1 Portfolio",
     "section": "AI Prototype Summary",
     "text": "AI Prototype Summary"
   },
