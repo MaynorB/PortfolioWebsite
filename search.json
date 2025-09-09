@@ -60,7 +60,14 @@
     "href": "labs/lab1/lab1.html#design-and-testing-methodology",
     "title": "E155 Portfolio",
     "section": "Design and Testing Methodology",
-    "text": "Design and Testing Methodology\nTo start, I began with the osciliator. It typically genertaes a clock signla at 24Mhz. A counter was utilized to divide the high frequency into one lower that would allow the led to blink at 2.4 Hz. It used a simple clock divider within the top module.\nThe next two LEDS were reletivly simple. I used gates for their respective inputs. I then assigned the result to the LED so it would flash when the conditions were met.\nAs for the segemnt, this was took a bit to design. I decided to utilize combinational logic and a case block to track the total inputs being provided. I have 15 different cases to track 0x1 to 0xF. With this, I decided to set 0x0 as default as no input would be provided. ## Technical Documentation:\nThe source code for the FPGA is found in the associated. github repository"
+    "text": "Design and Testing Methodology\nTo start, I began with the osciliator. It typically genertaes a clock signla at 24Mhz. A counter was utilized to divide the high frequency into one lower that would allow the led to blink at 2.4 Hz. It used a simple clock divider within the top module.\nThe next two LEDS were reletivly simple. I used gates for their respective inputs. I then assigned the result to the LED so it would flash when the conditions were met.\nAs for the segemnt, this was took a bit to design. I decided to utilize combinational logic and a case block to track the total inputs being provided. I have 15 different cases to track 0x1 to 0xF. With this, I decided to set 0x0 as default as no input would be provided."
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#technical-documentation",
+    "href": "labs/lab1/lab1.html#technical-documentation",
+    "title": "E155 Portfolio",
+    "section": "Technical Documentation:",
+    "text": "Technical Documentation:\nThe source code for the FPGA is found in the associated. github repository"
   },
   {
     "objectID": "labs/lab1/lab1.html#block-diagram",
@@ -74,7 +81,28 @@
     "href": "labs/lab1/lab1.html#schematic",
     "title": "E155 Portfolio",
     "section": "Schematic",
-    "text": "Schematic\n Figure 2 shows the schemqtic for the circut, highlighting the resistors values used for the LEDS. ## Results and Discussion The results was that it worked great. The seven segement LED was able to display 0x0 to 0xF.The LEDs were flashing correctly, with two being based on XOR and AND gates, the third being timed with 2.4Hz. However, I did not write out a test bench, ideally I would have written one to make sure all cases would work ## Results and Discussion The LEDs were blinking successfully and the seven segement display properly displayed the values. I spend about 16 hrs on this lab ## AI Prototype Summary"
+    "text": "Schematic\n Figure 2 shows the schemqtic for the circut, highlighting the resistors values used for the LEDS."
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#results-and-discussion",
+    "href": "labs/lab1/lab1.html#results-and-discussion",
+    "title": "E155 Portfolio",
+    "section": "Results and Discussion",
+    "text": "Results and Discussion\nThe results was that it worked great. The seven segement LED was able to display 0x0 to 0xF.The LEDs were flashing correctly, with two being based on XOR and AND gates, the third being timed with 2.4Hz. However, I did not write out a test bench, ideally I would have written one to make sure all cases would work"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#results-and-discussion-1",
+    "href": "labs/lab1/lab1.html#results-and-discussion-1",
+    "title": "E155 Portfolio",
+    "section": "Results and Discussion",
+    "text": "Results and Discussion\nThe LEDs were blinking successfully and the seven segement display properly displayed the values. I spend about 16 hrs on this lab"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#ai-prototype-summary",
+    "href": "labs/lab1/lab1.html#ai-prototype-summary",
+    "title": "E155 Portfolio",
+    "section": "AI Prototype Summary",
+    "text": "AI Prototype Summary"
   },
   {
     "objectID": "posts/first-post.html",
