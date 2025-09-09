@@ -14,6 +14,41 @@
     "text": "Maynor is a computer scientist at Harvey Mudd who does not like sitting down all day coding, he prefers making a sonic sensor detect if he is in front of it or not. When not sobbing in the corner because of his classes he chose, he enjoys gaming, skating around and failing the tricks, gymming, listening to music, buying more Jordans, looking at cars and laying down in the randomest places you can think of."
   },
   {
+    "objectID": "labs/lab2/lab2.html#introduction",
+    "href": "labs/lab2/lab2.html#introduction",
+    "title": "Block Diagram",
+    "section": "Introduction",
+    "text": "Introduction\nIn this lab, we were to use time multiplexing to use the I/O on our FPGA to display two independent hexadecimal numbers on a duel seven-segment display. We had to use eight inputs to provide data and use five LEDs to display the sum of the values present on the seven segement display"
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#design-and-testing-methodology",
+    "href": "labs/lab2/lab2.html#design-and-testing-methodology",
+    "title": "Block Diagram",
+    "section": "Design and Testing Methodology",
+    "text": "Design and Testing Methodology\nUsing the on boar high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as that is what the human eye can see without noticing flickering…\nI decided to use seven resistors and wire each segemnt together on the same line for both 7 segment LED displays. This means that to power the corresponding segemnts on the displays, they’re joined together with a wire to minimize the amount of resistors used."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#technical-documentation",
+    "href": "labs/lab2/lab2.html#technical-documentation",
+    "title": "Block Diagram",
+    "section": "Technical Documentation:",
+    "text": "Technical Documentation:\nThe source code can be found here: The source code for the FPGA is found in the associated. github repository"
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#results-and-discussion",
+    "href": "labs/lab2/lab2.html#results-and-discussion",
+    "title": "Block Diagram",
+    "section": "Results and Discussion",
+    "text": "Results and Discussion"
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#ai-prototype-summary",
+    "href": "labs/lab2/lab2.html#ai-prototype-summary",
+    "title": "Block Diagram",
+    "section": "AI Prototype Summary",
+    "text": "AI Prototype Summary"
+  },
+  {
     "objectID": "labs/lab1/lab1.html#introduction",
     "href": "labs/lab1/lab1.html#introduction",
     "title": "Block Diagram",
