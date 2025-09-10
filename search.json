@@ -46,7 +46,7 @@
     "href": "labs/lab2/lab2.html#schematic",
     "title": "Conclusion",
     "section": "Schematic",
-    "text": "Schematic"
+    "text": "Schematic\nThe schematic shows the physical layout of the circut/design. The output LEDs are connected to a 160 Ohm resistor to bring down the output current of the pins. Two wires that helped power the displays were linked up to a transistors to help prevent the current exceeding the maximum output of the pins, attached to a 10K Ohm resistor to ensure when powered off, the current flows through the resistor. Finally, the segment LED themsevlevs were hooked to 160 Ohm resistors to prevent leakage and maintain stable brightness.\n\n\n\nFigure 3"
   },
   {
     "objectID": "labs/lab2/lab2.html#results-and-discussion",
