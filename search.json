@@ -16,49 +16,35 @@
   {
     "objectID": "labs/lab2/lab2.html#introduction",
     "href": "labs/lab2/lab2.html#introduction",
-    "title": "Conclusion",
+    "title": "Technical Documentation:",
     "section": "Introduction",
     "text": "Introduction\nIn this lab, we were to use time multiplexing to use the I/O on our FPGA to display two independent hexadecimal numbers on a duel seven-segment display. We had to use eight inputs to provide data and use five LEDs to display the sum of the values present on the seven segement display \nHere is the pin assignment."
   },
   {
     "objectID": "labs/lab2/lab2.html#design-and-testing-methodology",
     "href": "labs/lab2/lab2.html#design-and-testing-methodology",
-    "title": "Conclusion",
+    "title": "Technical Documentation:",
     "section": "Design and Testing Methodology",
     "text": "Design and Testing Methodology\nUsing the on boar high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as that is what the human eye can see without noticing flickering. I decided to go above 1000 Hz just in case. Utilizing the equation f_out = f_in / 2 ^ n, n being the number of bits, I deduced to using 14 bits, as it would yield a frequency of about 1.4kHz.\nI decided to use seven resistors and wire each segemnt together on the same line for both 7 segment LED displays. This means that to power the corresponding segemnts on the displays, they’re joined together with a wire to minimize the amount of resistors used. Finally, linking to output GPIOs, each segment display recieved its own wire that would power the display through the transitor to help limit current."
   },
   {
-    "objectID": "labs/lab2/lab2.html#technical-documentation",
-    "href": "labs/lab2/lab2.html#technical-documentation",
-    "title": "Conclusion",
-    "section": "Technical Documentation:",
-    "text": "Technical Documentation:\nThe source code can be found here: LAB2MBI The source code for the FPGA is found in the associated. github repository"
-  },
-  {
-    "objectID": "labs/lab2/lab2.html#block-diagram",
-    "href": "labs/lab2/lab2.html#block-diagram",
-    "title": "Conclusion",
-    "section": "Block Diagram",
-    "text": "Block Diagram\nThe block diagram shows the overall structure of the design. There is three submodules present, the sevenSegment logic to display the correct value, the high speed oscillator block and the counter logic block.\n\n\n\nFigure 2"
-  },
-  {
     "objectID": "labs/lab2/lab2.html#schematic",
     "href": "labs/lab2/lab2.html#schematic",
-    "title": "Conclusion",
+    "title": "Technical Documentation:",
     "section": "Schematic",
     "text": "Schematic\nThe schematic shows the physical layout of the circut/design. The output LEDs are connected to a 160 Ohm resistor to bring down the output current of the pins. Two wires that helped power the displays were linked up to a transistors to help prevent the current exceeding the maximum output of the pins, attached to a 10K Ohm resistor to ensure when powered off, the current flows through the resistor. Finally, the segment LED themsevlevs were hooked to 160 Ohm resistors to prevent leakage and maintain stable brightness.\n\n\n\nFigure 3"
   },
   {
     "objectID": "labs/lab2/lab2.html#results-and-discussion",
     "href": "labs/lab2/lab2.html#results-and-discussion",
-    "title": "Conclusion",
+    "title": "Technical Documentation:",
     "section": "Results and Discussion",
     "text": "Results and Discussion\nStarting off with the testbench, we can see the simulations ran pretty well. We can see no error wave pop up throughout the simulations. The specific vectorsd that were tested measured if the segment displayed the correct values for both sets of inputs while the LEDs correctly lit up the sum represented in bit form."
   },
   {
     "objectID": "labs/lab2/lab2.html#ai-prototype-summary",
     "href": "labs/lab2/lab2.html#ai-prototype-summary",
-    "title": "Conclusion",
+    "title": "Technical Documentation:",
     "section": "AI Prototype Summary",
     "text": "AI Prototype Summary\nFor both outputs, the quality was not bad. HOwever, it did seem it overcomplicated the code, crafting an osc and utilizing wires for logic. I was surpised to see wires be used rather than just logic. I was surprisesd to see it compiled for the first prompt, and not utilize the oscilliator for the second prompt. My main issues with both codes is how it set two sets of seven outputs for each individual segemnt display when just one would have been enough.\n\n\n\nFigure 5\n\n\nFor the second one, it did attempt to make its own oscilliator, but recommended to replace the ports with our own.  Honestly, it’s a really messy start to just prompt it like this. I think simply asking clarifying questions to help aid in the lab would suffice."
   },
