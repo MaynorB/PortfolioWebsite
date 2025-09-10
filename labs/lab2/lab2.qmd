@@ -6,6 +6,9 @@ two independent hexadecimal numbers on a duel seven-segment display. We had to u
 to provide data and use five LEDs to display the sum of the values present on the seven segement display
 ![Figure 1](images/circut.png){fig-align="center"}
 
+Here is the pin assignment. 
+![Pins](images/pin.png){fig-align="center"}
+
 ## Design and Testing Methodology
 Using the on boar high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as
 that is what the human eye can see without noticing flickering. I decided to go above 1000 Hz just in case. Utilizing the equation  f_out = f_in / 2 ^ n, n being the number of bits, I deduced to using 14 bits, as it would yield a frequency of about 1.4kHz. 
@@ -14,13 +17,18 @@ I decided to use seven resistors and wire each segemnt together on the same line
 that to power the corresponding segemnts on the displays, they're joined together with a wire to minimize the amount of resistors used. Finally, linking to output GPIOs, each segment display recieved its own wire that would power the display through the transitor to help limit current. 
 
 ## Technical Documentation:
-The source code can be found here: 
+The source code can be found here: [LAB2MBI](https://github.com/MaynorB/lab_2)
 The source code for the FPGA is found in the associated. github repository
 
 ## Block Diagram
+The block diagram shows the overall structure of the design. There is three submodules present, the sevenSegment logic to display the correct value, the high speed oscillator block and the counter logic block. 
 
+![Figure 2](images/block.jpg){fig-align="center"}
 
 ## Schematic 
+The schematic shows the physical layout of the circut/design. The output LEDs are connected to a 160 Ohm resistor to bring down the output current of the pins. Two wires that helped power the displays were linked up to a transistors to help prevent the current exceeding the maximum output of the pins, attached to a 10K Ohm resistor to ensure when powered off, the current flows through the resistor. Finally, the segment LED themsevlevs were hooked to 160 Ohm resistors to prevent leakage and maintain stable brightness.
+
+![Figure 3](images/schematic.jpg){fig-align="center"}
 
 ## Results and Discussion
 
