@@ -1,1 +1,26 @@
 ## Lab 2: Multiplexed 7-Segment Display
+
+## Introduction
+In this lab, we were to use time multiplexing to use the I/O on our FPGA to display 
+two independent hexadecimal numbers on a duel seven-segment display. We had to use eight inputs
+to provide data and use five LEDs to display the sum of the values present on the
+seven segement display
+
+## Design and Testing Methodology
+Using the on boar high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as
+that is what the human eye can see without noticing flickering...
+
+I decided to use seven resistors and wire each segemnt together on the same line for both 7 segment LED displays. This means
+that to power the corresponding segemnts on the displays, they're joined together with a wire to minimize the amount of resistors used. 
+
+## Technical Documentation:
+The source code can be found here: 
+The source code for the FPGA is found in the associated. github repository
+
+# Block Diagram
+
+
+# Schematic 
+
+## Results and Discussion
+## AI Prototype Summary
