@@ -28,7 +28,7 @@ Starting off with the testbench, we can see the simulations ran pretty well. We 
 
 
 ## Conclusion
-The design successfully was able to display both values given by the two sets of inputs without flickering as it swicthed between which display to power. The LEDs also correctly displayed the sum of both values in binary. 
+The design successfully was able to display both values given by the two sets of inputs without flickering as it swicthed between which display to power. The LEDs also correctly displayed the sum of both values in binary. I worked on this lab for about 10 hrs
 
 ## AI Prototype Summary
 For both outputs, the quality was not bad. HOwever, it did seem it overcomplicated the code, crafting an osc and utilizing wires for logic. I was surpised to see wires be used rather than just logic. I was surprisesd to see it compiled for the first prompt, and not utilize the oscilliator for the second prompt. My main issues with both codes is how it set two sets of seven outputs for each individual segemnt display when just one would have been enough. 
