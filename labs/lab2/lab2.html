@@ -160,6 +160,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#schematic" id="toc-schematic" class="nav-link" data-scroll-target="#schematic">Schematic</a>
   <ul class="collapse">
   <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
   </ul></li>
   </ul>
@@ -180,8 +181,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="design-and-testing-methodology" class="level2">
 <h2 class="anchored" data-anchor-id="design-and-testing-methodology">Design and Testing Methodology</h2>
-<p>Using the on boar high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as that is what the human eye can see without noticing flickering…</p>
-<p>I decided to use seven resistors and wire each segemnt together on the same line for both 7 segment LED displays. This means that to power the corresponding segemnts on the displays, they’re joined together with a wire to minimize the amount of resistors used.</p>
+<p>Using the on boar high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as that is what the human eye can see without noticing flickering. I decided to go above 1000 Hz just in case. Utilizing the equation f_out = f_in / 2 ^ n, n being the number of bits, I deduced to using 14 bits, as it would yield a frequency of about 1.4kHz.</p>
+<p>I decided to use seven resistors and wire each segemnt together on the same line for both 7 segment LED displays. This means that to power the corresponding segemnts on the displays, they’re joined together with a wire to minimize the amount of resistors used. Finally, linking to output GPIOs, each segment display recieved its own wire that would power the display through the transitor to help limit current.</p>
 </section>
 <section id="technical-documentation" class="level2">
 <h2 class="anchored" data-anchor-id="technical-documentation">Technical Documentation:</h2>
@@ -194,9 +195,22 @@ ul.task-list li input[type="checkbox"] {
 <h1>Schematic</h1>
 <section id="results-and-discussion" class="level2">
 <h2 class="anchored" data-anchor-id="results-and-discussion">Results and Discussion</h2>
+<p>Starting off with the testbench, we can see the simulations ran pretty well. We can see no error wave pop up throughout the simulations. The specific vectorsd that were tested measured if the segment displayed the correct values for both sets of inputs while the LEDs correctly lit up the sum represented in bit form. <img src="images/testbench.png" class="img-fluid quarto-figure quarto-figure-center" alt="Figure 1"></p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The design successfully was able to display both values given by the two sets of inputs without flickering as it swicthed between which display to power. The LEDs also correctly displayed the sum of both values in binary. I worked on this lab for about 10 hrs</p>
 </section>
 <section id="ai-prototype-summary" class="level2">
 <h2 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h2>
+<p>For both outputs, the quality was not bad. HOwever, it did seem it overcomplicated the code, crafting an osc and utilizing wires for logic. I was surpised to see wires be used rather than just logic. I was surprisesd to see it compiled for the first prompt, and not utilize the oscilliator for the second prompt. My main issues with both codes is how it set two sets of seven outputs for each individual segemnt display when just one would have been enough.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/AI1.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2</figcaption>
+</figure>
+</div>
+<p>For the second one, it did attempt to make its own oscilliator, but recommended to replace the ports with our own. <img src="images/AI2.png" class="img-fluid quarto-figure quarto-figure-center" alt="Figure 3"> Honestly, it’s a really messy start to just prompt it like this. I think simply asking clarifying questions to help aid in the lab would suffice.</p>
 
 
 </section>
