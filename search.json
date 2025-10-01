@@ -14,6 +14,34 @@
     "text": "Maynor is a computer scientist at Harvey Mudd who does not like sitting down all day coding, he prefers making a sonic sensor detect if he is in front of it or not. When not sobbing in the corner because of his classes he chose, he enjoys gaming, skating around and failing the tricks, gymming, listening to music, buying more Jordans, looking at cars and laying down in the randomest places you can think of."
   },
   {
+    "objectID": "labs/lab4/lab4.html#introduction",
+    "href": "labs/lab4/lab4.html#introduction",
+    "title": "Technical Documentation:",
+    "section": "Introduction",
+    "text": "Introduction\nIn this lab, we were to program a microcontrolle in C to be able to produce a square wave output on a pin and feed it into a speaker utilizing an audio amplifier to help control current. We are to use hardcoded drivers by reading the datasheet/reference sheet as a guide to write these."
+  },
+  {
+    "objectID": "labs/lab4/lab4.html#design",
+    "href": "labs/lab4/lab4.html#design",
+    "title": "Technical Documentation:",
+    "section": "Design",
+    "text": "Design\nReading the documentation, I decided to simply turn on and off a GPIO pin. I settled on GPIO B5, no specific reason. As for using a clock and timer, reading through the documentation, I setled on Timer 2 as I saw there were 32 bits compared to Timer 15/16. Making life easier, I decided to simply use the MSI clock as it was the default clock with every reset and I can avoid writing code to change the clock the Microcontroller would use.\nNow for the calculations to get the desired frequency. This was a tough one."
+  },
+  {
+    "objectID": "labs/lab4/lab4.html#schematic",
+    "href": "labs/lab4/lab4.html#schematic",
+    "title": "Technical Documentation:",
+    "section": "Schematic",
+    "text": "Schematic"
+  },
+  {
+    "objectID": "labs/lab4/lab4.html#ai-prototype-summary",
+    "href": "labs/lab4/lab4.html#ai-prototype-summary",
+    "title": "Technical Documentation:",
+    "section": "AI Prototype Summary",
+    "text": "AI Prototype Summary\nTyping the prompt into ChatGPT, it yielded that we should use Timer2 becuase it is 32Bit. Saying that it is also one that can be configured as a toggle output. This is similar to why I chose timer2 as there were more bits to work with. I did not know however that we can configure it directly as a toggle output.\nIt also provided formulas that would be useful. I think the output is not as bad as it was before. It seems as it helps speed up the process of reading through the mannual. When compared to acting as HDL generator, it certainly appears to do better."
+  },
+  {
     "objectID": "labs/lab2/lab2.html#introduction",
     "href": "labs/lab2/lab2.html#introduction",
     "title": "Technical Documentation:",
@@ -25,7 +53,7 @@
     "href": "labs/lab2/lab2.html#design-and-testing-methodology",
     "title": "Technical Documentation:",
     "section": "Design and Testing Methodology",
-    "text": "Design and Testing Methodology\nUsing the on boar high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as that is what the human eye can see without noticing flickering. I decided to go above 1000 Hz just in case. Utilizing the equation f_out = f_in / 2 ^ n, n being the number of bits, I deduced to using 14 bits, as it would yield a frequency of about 1.4kHz.\nI decided to use seven resistors and wire each segemnt together on the same line for both 7 segment LED displays. This means that to power the corresponding segemnts on the displays, they’re joined together with a wire to minimize the amount of resistors used. Finally, linking to output GPIOs, each segment display recieved its own wire that would power the display through the transitor to help limit current."
+    "text": "Design and Testing Methodology\nUsing the on board high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as that is what the human eye can see without noticing flickering. I decided to go above 1000 Hz just in case. Utilizing the equation f_out = f_in / 2 ^ n, n being the number of bits, I deduced to using 14 bits, as it would yield a frequency of about 1.4kHz.\nI decided to use seven resistors and wire each segemnt together on the same line for both 7 segment LED displays. This means that to power the corresponding segemnts on the displays, they’re joined together with a wire to minimize the amount of resistors used. Finally, linking to output GPIOs, each segment display recieved its own wire that would power the display through the transitor to help limit current."
   },
   {
     "objectID": "labs/lab2/lab2.html#block-diagram",

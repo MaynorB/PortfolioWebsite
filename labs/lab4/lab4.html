@@ -153,6 +153,16 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#lab-4-digital-audio" id="toc-lab-4-digital-audio" class="nav-link active" data-scroll-target="#lab-4-digital-audio">Lab 4: Digital Audio</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design" id="toc-design" class="nav-link" data-scroll-target="#design">Design</a></li>
+  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation:</a>
+  <ul class="collapse">
+  <li><a href="#schematic" id="toc-schematic" class="nav-link" data-scroll-target="#schematic">Schematic</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -164,8 +174,38 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lab-4-digital-audio" class="level2">
 <h2 class="anchored" data-anchor-id="lab-4-digital-audio">Lab 4: Digital Audio</h2>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this lab, we were to program a microcontrolle in C to be able to produce a square wave output on a pin and feed it into a speaker utilizing an audio amplifier to help control current. We are to use hardcoded drivers by reading the datasheet/reference sheet as a guide to write these.</p>
+</section>
+<section id="design" class="level2">
+<h2 class="anchored" data-anchor-id="design">Design</h2>
+<p>Reading the documentation, I decided to simply turn on and off a GPIO pin. I settled on GPIO B5, no specific reason. As for using a clock and timer, reading through the documentation, I setled on Timer 2 as I saw there were 32 bits compared to Timer 15/16. Making life easier, I decided to simply use the MSI clock as it was the default clock with every reset and I can avoid writing code to change the clock the Microcontroller would use.</p>
+<p>Now for the calculations to get the desired frequency. This was a tough one.</p>
+</section>
+<section id="technical-documentation" class="level1">
+<h1>Technical Documentation:</h1>
+<p>The source code can be found here: <a href="https://github.com/MaynorB/lab4">LAB4MI</a></p>
+<section id="schematic" class="level2">
+<h2 class="anchored" data-anchor-id="schematic">Schematic</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/schematic.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<pre><code>Once wired up, it did play the song. It played at a reasonable temp as well. The only thing is the tempo could be off depending on the caluclations done but it still did good.</code></pre>
+<section id="ai-prototype-summary" class="level2">
+<h2 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h2>
+<p>Typing the prompt into ChatGPT, it yielded that we should use Timer2 becuase it is 32Bit. Saying that it is also one that can be configured as a toggle output. This is similar to why I chose timer2 as there were more bits to work with. I did not know however that we can configure it directly as a toggle output.</p>
+<p>It also provided formulas that would be useful. I think the output is not as bad as it was before. It seems as it helps speed up the process of reading through the mannual. When compared to acting as HDL generator, it certainly appears to do better.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
