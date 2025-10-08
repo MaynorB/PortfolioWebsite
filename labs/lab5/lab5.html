@@ -155,7 +155,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lab-5-interrupts" id="toc-lab-5-interrupts" class="nav-link active" data-scroll-target="#lab-5-interrupts">Lab 5: Interrupts</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#design" id="toc-design" class="nav-link" data-scroll-target="#design">Design</a></li>
+  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation:</a>
+  <ul class="collapse">
   <li><a href="#schematic" id="toc-schematic" class="nav-link" data-scroll-target="#schematic">Schematic</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
   <ul class="collapse">
   <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
@@ -178,20 +181,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="design" class="level2">
 <h2 class="anchored" data-anchor-id="design">Design</h2>
-<p>Starting off, we needed two intruppts. I linked them to PA pins that were 5V tolerable as the motor used 5V logic. From there, I decided to enable the intruupts based on rising and falling edge to get the best resolution to help calculate the velocity. We count every intrupt we get, but the important part was figuring out which way it was currently rotating.</p>
-<p>After getting the counts done, we now move onto the final division. I have TMR2 set up with 1ms ticks and have it send an overflow interupt when it hits 1 second, which is 1Hz to update the rev per second. Note that I adjusted it to update every 500 ms as well and it works fine, better in my opinion. # Technical Documentation: The source code can be found here: <a href="https://github.com/MaynorB/lab5">LAB5</a></p>
+<p>Starting off, we needed two intruppts. I linked them to PA pins that were 5V tolerable as the motor used 5V logic. From there, I decided to enable the intruupts based on rising and falling edge to get the best resolution to help calculate the velocity. We count every intrupt we get, but the important part was figuring out which way it was currently rotating. To start I assumed it would has not changed direction, setting it to 0. To detect if it changed direction, it would ‘or’ direction variable with the last ouklse generated. Last Pulse is first initated by getting the currecnt edges, it would ‘xor’ the two values given, providing a 1 if it were PA1 and a 0 if it were PA2. Back to direction, this is specific to intrupt on PA1: if it sees a 0 and direction 0, it would say the direction is fine and set the last pin variable as 1.</p>
+<p>Now for inturupt 2: It does the same thing, except it ‘nots’ the result. This is due to PA2 being based off being 0.</p>
+<p>To generate pulses, we do 1 - 2*direction, as if we did change direction, it should subtract rather than add.</p>
+<p>After getting the counts done, we now move onto the final division. I have TMR2 set up with 1ms ticks and have it send an overflow interupt when it hits 1 second, which is 1Hz to update the rev per second. Note that TMR2 can be adjusted to indicate overflow by adjusting its ARR to be ARR = (DesiredSampleRateMS - 1).</p>
 </section>
+<section id="technical-documentation" class="level1">
+<h1>Technical Documentation:</h1>
+<p>The source code can be found here: <a href="https://github.com/MaynorB/lab5">LAB5</a></p>
 <section id="schematic" class="level2">
 <h2 class="anchored" data-anchor-id="schematic">Schematic</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/schematic.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
+<p>The following shcematic is my wiring for this lab <img src="images/shematic.png" class="img-fluid quarto-figure quarto-figure-center" alt="Figure1"></p>
+</section>
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
-<p>It did end up working. However, very very rarely it would swap directions for 1-4 updates before correcting itself. This could be likly due to the intrupts taking a bit longer than I hope or at worse it missed a pulse, which still links to an intrupt not being cleared fast enough. But for now, it works fine.</p>
+<p>It did end up working. However, very very rarely it would swap directions for 1-4 updates before correcting itself. This could be likly due to the intrupts taking a bit longer than I hope or at worse it missed a pulse, which still links to an intrupt not being cleared fast enough. But for now, it works fine. Here is some calculations to showcase our accuracy. <img src="images/5V.png" class="img-fluid quarto-figure quarto-figure-left" alt="Figure2"> <img src="images/10V.png" class="img-fluid quarto-figure quarto-figure-right" alt="Figure3"></p>
 <section id="ai-prototype-summary" class="level2">
 <h2 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h2>
 <p>I plugged the prompt into ChatGPT, it provided me with two solutions: a Timer in Encoder mode and External inturrupts on GPIOs. I am going to specifically talk about the external inturrpts. It recommened me to use PA0 and PA1 as they are directly mapped to channels on Timer2 allowing for future upgrades into encoder mode. It provided some code, but when prompted furthur, the code it provided just simply didn’t run. It makes sense it why it explained PA0 and PA1. I believe it makes a good starting point but not a great tool to fully complete the lab as it does mix a few things up.</p>
