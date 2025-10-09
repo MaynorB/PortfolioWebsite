@@ -10,7 +10,7 @@ Here is the pin assignment.
 ![Pins](images/pin.png){fig-align="center"}
 
 ## Design and Testing Methodology
-Using the on boar high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as
+Using the on board high speed oscilator, I decided to keep track of cycles. Ideally I slow it down to 500 to 1000 HZ range as
 that is what the human eye can see without noticing flickering. I decided to go above 1000 Hz just in case. Utilizing the equation  f_out = f_in / 2 ^ n, n being the number of bits, I deduced to using 14 bits, as it would yield a frequency of about 1.4kHz. 
 
 I decided to use seven resistors and wire each segemnt together on the same line for both 7 segment LED displays. This means
