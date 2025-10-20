@@ -179,7 +179,7 @@
     "href": "labs/Proposal/proposal.html#bill-of-materials",
     "title": "Specs needed:",
     "section": "Bill of Materials",
-    "text": "Bill of Materials\n– DAC (stockroom?) if not: [PCM5102A] in Amazon (faster delivery and 3 pieces in case we mess up) – SD card reader (stockroom, able to use UART or SPI) – Speaker (Lab 4) – Joystick (stockroom)\n\n\n\nFigure1"
+    "text": "Bill of Materials\n1. DAC (stockroom?) if not: [PCM5102A] in [Amazon](https://www.amazon.com/Teyleten-Robot-GY-PCM5102-Converter-Raspberry/dp/B09C5QX228/ref=sr_1_1_sspa?crid=PL0VKTV5P1WE&dib=eyJ2IjoiMSJ9.VuF0vby1G3PnkJn6Ja515HPAxINH647syBgyKoQG6MAFlR_Gi7DfzjFeFLO2WzgqD-DVpY4x8AppD55LWuZ4odP8BaHMePlG82FVknMM-Jqrlwa3AmpHU5xTKk1jilQCpDQZTMuVV7JFcFCazi0wnXaHp7L91bQQWLMUw7N7iqFFWlXz416l-fqOT89xvz6VPF6tpIbp6B2QMAivEnOn2jO3XIOrkzG0-kyoHy1_gCU.EeeWvOayxNToCgagxce5z-uqKgTwFWafcJaa7Tf1f7Q&dib_tag=se&keywords=PCM5102A&qid=1760939036&sprefix=pcm5102a%2Caps%2C379&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1) (faster delivery and 3 pieces in case we mess up)\n2. SD card reader (stockroom, able to use UART or SPI)\n3. Speaker (Lab 4)\n4. Joystick (stockroom)\n\n\n\nFigure1"
   },
   {
     "objectID": "labs/Proposal/proposal.html#timeline",
