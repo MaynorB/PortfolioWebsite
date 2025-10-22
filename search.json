@@ -70,6 +70,34 @@
     "text": "AI Prototype Summary\nI plugged the prompt into ChatGPT, it provided me with two solutions: a Timer in Encoder mode and External inturrupts on GPIOs. I am going to specifically talk about the external inturrpts. It recommened me to use PA0 and PA1 as they are directly mapped to channels on Timer2 allowing for future upgrades into encoder mode. It provided some code, but when prompted furthur, the code it provided just simply didn’t run. It makes sense it why it explained PA0 and PA1. I believe it makes a good starting point but not a great tool to fully complete the lab as it does mix a few things up."
   },
   {
+    "objectID": "labs/lab6/lab6.html#introduction",
+    "href": "labs/lab6/lab6.html#introduction",
+    "title": "Technical Documentation:",
+    "section": "Introduction",
+    "text": "Introduction\nIn this lab, we were tasked to write an SPI library that would read from temperature sensor DS1722 and dislay the reading in celsius on an HTML website provided in the starter code. From this websitee we are also to control an LED, with buttons turning it on and off"
+  },
+  {
+    "objectID": "labs/lab6/lab6.html#design",
+    "href": "labs/lab6/lab6.html#design",
+    "title": "Technical Documentation:",
+    "section": "Design",
+    "text": "Design\nTo begin, first I made sure our HTML website worked beacuse it was already included with the starter code. Running it barebones while commenting out anything SPI related, the website worked and the LED state was changed. Now comes the implementation. From the datasheet, we can see our Microcontroller has 3 SPIs we can use. I decided to use SPI1 because it seemed straight forward and did not have any pin clashing with USART. When setting it up, I decided to set the BR to 0’111 or 80MHz / 2^8, this is to make sure things were running smoothly. As for the resolution for DS1722, I set it to 10 Bit, reason being that I felt that 2 decimal points is all I needed."
+  },
+  {
+    "objectID": "labs/lab6/lab6.html#schematic",
+    "href": "labs/lab6/lab6.html#schematic",
+    "title": "Technical Documentation:",
+    "section": "Schematic",
+    "text": "Schematic\nThe following shcematic is my wiring for this lab"
+  },
+  {
+    "objectID": "labs/lab6/lab6.html#ai-prototype-summary",
+    "href": "labs/lab6/lab6.html#ai-prototype-summary",
+    "title": "Technical Documentation:",
+    "section": "AI Prototype Summary",
+    "text": "AI Prototype Summary"
+  },
+  {
     "objectID": "labs/lab1/lab1.html#introduction",
     "href": "labs/lab1/lab1.html#introduction",
     "title": "E155 Portfolio",

@@ -157,6 +157,16 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#lab-6-the-internet-of-things-and-serial-peripheral-interface" id="toc-lab-6-the-internet-of-things-and-serial-peripheral-interface" class="nav-link active" data-scroll-target="#lab-6-the-internet-of-things-and-serial-peripheral-interface">Lab 6: The Internet of Things and Serial Peripheral Interface</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design" id="toc-design" class="nav-link" data-scroll-target="#design">Design</a></li>
+  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation:</a>
+  <ul class="collapse">
+  <li><a href="#schematic" id="toc-schematic" class="nav-link" data-scroll-target="#schematic">Schematic</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -168,8 +178,31 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lab-6-the-internet-of-things-and-serial-peripheral-interface" class="level2">
 <h2 class="anchored" data-anchor-id="lab-6-the-internet-of-things-and-serial-peripheral-interface">Lab 6: The Internet of Things and Serial Peripheral Interface</h2>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this lab, we were tasked to write an SPI library that would read from temperature sensor DS1722 and dislay the reading in celsius on an HTML website provided in the starter code. From this websitee we are also to control an LED, with buttons turning it on and off</p>
+</section>
+<section id="design" class="level2">
+<h2 class="anchored" data-anchor-id="design">Design</h2>
+<p>To begin, first I made sure our HTML website worked beacuse it was already included with the starter code. Running it barebones while commenting out anything SPI related, the website worked and the LED state was changed. Now comes the implementation. From the datasheet, we can see our Microcontroller has 3 SPIs we can use. I decided to use SPI1 because it seemed straight forward and did not have any pin clashing with USART. When setting it up, I decided to set the BR to 0’111 or 80MHz / 2^8, this is to make sure things were running smoothly. As for the resolution for DS1722, I set it to 10 Bit, reason being that I felt that 2 decimal points is all I needed.</p>
+</section>
+<section id="technical-documentation" class="level1">
+<h1>Technical Documentation:</h1>
+<p>The source code can be found here: <a href="https://github.com/MaynorB/lab6">LAB6</a></p>
+<section id="schematic" class="level2">
+<h2 class="anchored" data-anchor-id="schematic">Schematic</h2>
+<p>The following shcematic is my wiring for this lab <img src="images/shematic.png" class="img-fluid quarto-figure quarto-figure-center" alt="Figure1"></p>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>It was a struggle getting everything set up. I constently read the data sheet to make sure I did not miss a step. Things did ended up working perfectly. This lab took me about 16 hrs.</p>
+<section id="ai-prototype-summary" class="level2">
+<h2 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
