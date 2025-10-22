@@ -88,14 +88,14 @@
     "href": "labs/lab6/lab6.html#schematic",
     "title": "Technical Documentation:",
     "section": "Schematic",
-    "text": "Schematic\nThe following shcematic is my wiring for this lab"
+    "text": "Schematic\nThe following schematic is my wiring for this lab"
   },
   {
     "objectID": "labs/lab6/lab6.html#ai-prototype-summary",
     "href": "labs/lab6/lab6.html#ai-prototype-summary",
     "title": "Technical Documentation:",
     "section": "AI Prototype Summary",
-    "text": "AI Prototype Summary"
+    "text": "AI Prototype Summary\nNow…the AI prototype. Under the first prompt, it gave me an html file. It wanted me to plug it directly into an existing HTML file but our USART doesn’t take it in. I say this mainly due to the fact it had the settings for the website too.\nNow for the second prompt, it gave me a complete c file. It also performs configurations, but does not touch any of the NSS settings. The reason why this doesn’t work though is that it assumes DS1722 is inactive at high logic when it is the opposite."
   },
   {
     "objectID": "labs/lab1/lab1.html#introduction",
